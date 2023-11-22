@@ -16,6 +16,7 @@ cloudinary.config({
 
 // GET ALL POSTS
 router.get('/', async (req, res) => {
+    console.log("routing working");
     try {
         const posts = await Post.find({});
         res.status(200).json({ success: true, data: posts })
