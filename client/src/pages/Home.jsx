@@ -16,7 +16,6 @@ const Home = () => {
         const response = await fetch('https://dall-e-server-six.vercel.app/api/v1/post', {
           method: 'GET',
           headers: { "Content-Type": "application/json" },
-          mode:"no-cors"
         });
         if (response.ok) {
           const result = await response.json();

@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
     console.log("routing working");
     try {
         const posts = await Post.find({});
+        console.log(posts);
         res.status(200).json({ success: true, data: posts })
     } catch (error) {
         console.log(error);
